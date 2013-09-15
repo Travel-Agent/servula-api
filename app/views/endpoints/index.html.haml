@@ -1,0 +1,37 @@
+%h1 Listing endpoints
+
+%ul
+  - @endpoints.each do |endpoint|
+    %li
+      %h3= endpoint.name
+      %p= endpoint.description
+      = link_to 'Show', endpoint
+
+-#      
+  %table
+    %tr
+      %th Name
+      %th Path
+      %th Method
+      %th Description
+      %th Parameters
+      %th Example
+      %th
+      %th
+      %th
+
+    - @endpoints.each do |endpoint|
+      %tr
+        %td= endpoint.name
+        %td= endpoint.path
+        %td= endpoint.method
+        %td= endpoint.description
+        %td= endpoint.parameters
+        %td= endpoint.example
+        %td= link_to 'Show', endpoint
+        %td= link_to 'Edit', edit_endpoint_path(endpoint)
+        %td= link_to 'Destroy', endpoint, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+  %br
+
+= link_to 'New Endpoint', new_endpoint_path

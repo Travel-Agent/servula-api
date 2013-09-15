@@ -1,0 +1,30 @@
+$main-bg-color: #222;
+
+header {
+  background: $main-bg-color;
+  padding: 0 emCalc(20);
+}
+
+footer {
+  background: $main-bg-color;
+  text-align: center;
+  padding: emCalc(20);
+
+  & > * {
+    font-size: emCalc(14);
+  }
+}
+
+#main {
+  background: $main-bg-color;
+  padding: 0 0 emCalc(20);
+  margin: emCalc(20) auto;
+
+  & > * {
+    padding-top: emCalc(20);
+  }
+
+  & > div {
+    border-left: 1px dashed #ccc;
+  }
+}

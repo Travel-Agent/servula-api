@@ -1,0 +1,8 @@
+- if Endpoint.any?
+  %h3 Endpoints
+  %ul.side-nav
+    - Endpoint.all.each do |endpoint|
+      %li
+        = link_to endpoint.name, endpoint
+
+= link_to 'Servula', 'https://my.servula.com'
