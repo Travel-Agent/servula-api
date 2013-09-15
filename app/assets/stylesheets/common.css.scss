@@ -3,6 +3,9 @@ $main-bg-color: #222;
 header {
   background: $main-bg-color;
   padding: 0 emCalc(20);
+  h1 {
+    line-height: 1.8181;
+  }
 }
 
 footer {
@@ -27,4 +30,8 @@ footer {
   & > div {
     border-left: 1px dashed #ccc;
   }
+}
+
+a img {
+  vertical-align: top;
 }
